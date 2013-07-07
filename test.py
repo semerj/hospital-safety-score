@@ -10,7 +10,7 @@ headers = driver.find_elements_by_css_selector('.table-headers')
 head_list = []
 for h in headers[0:6]:
   txt_list.append(h.text)
-return txt_list # list of column headers
+return txt_list 	# list of column headers
 
 sky = driver.find_elements_by_css_selector('.sky-blue td')
 sky_list = []
@@ -24,6 +24,6 @@ s_list = []
 for i in range(7):
 	s_list.append(sky_list[i:78:7])
 
-s_list 				    # list of lists
-s_list[0] 			  # list of all measures; state file column headers
-s_list[6] 			  # list of dates
+s_list 			# list of lists
+s_list[0] 		# list of all measures; state file column headers
+s_list[6] 		# list of dates
