@@ -1,3 +1,5 @@
+# warning: this took 4.5 hrs to go form AL to WY
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
