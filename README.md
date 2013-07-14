@@ -1,6 +1,6 @@
-hospital safety score
+Scraping Hospital Safety Score Data
 =====================
 
-Python scraping exercise
+My first stab at web scraping with Python
 
-no one should ever use this ever
+NO ONE SHOULD USE THIS, EVER.
