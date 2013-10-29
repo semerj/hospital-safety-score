@@ -3,10 +3,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 import csv
 
-driver = webdriver.Firefox()
-
 def search(state):
-  hosp_list = []
+	hosp_list = []
 	url = "http://www.hospitalsafetyscore.org/search-result?zip_code=&hospital=&city=&state_prov=" + state + "&agree=agree"
 	driver.get(url)
 	time.sleep(3)
@@ -19,13 +17,21 @@ def search(state):
 		wtr = csv.writer(f, delimiter = ',')
 		wtr.writerows(hosp_list)
 
-f = open('state_abrv.txt', 'r')
-state_list = f.read().split()   #state_list = ['AL', 'CA']
+states = ["AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","ID","IL","IN","IA","KS",
+		  "KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC",
+		  "ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"]
 
-for s in state_list:
-	search(s)
+driver = webdriver.Firefox()
+driver.get("http://www.hospitalsafetyscore.org/")
+checkbox = driver.find_element_by_id('agree')
+checkbox.click()
+driver.find_element_by_id('search_hosp_btn').click()
+
+for state in states:
+	search(state)
 
 driver.close()
+
 """
 # Gets the first hospital's HTML on a state page
 hospital_1 = driver.find_elements_by_css_selector('div.right-con')[0]
