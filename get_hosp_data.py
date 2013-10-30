@@ -10,7 +10,7 @@ driver = webdriver.Firefox()
 
 def get_data(url):
 	driver.get(url)
-	time.sleep(5)
+	time.sleep(3)
 	elements = driver.find_elements_by_css_selector('.hospitals_score')
 	grade = driver.find_element_by_css_selector('.d-col1').get_attribute('data-grade')
 	lat = driver.find_element_by_css_selector('.d-col1').get_attribute('data-lat')
