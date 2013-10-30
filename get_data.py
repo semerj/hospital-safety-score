@@ -24,7 +24,7 @@ def get_data(url):
 
 def open_state_file(file):
 	all_data = []
-	s = open(file + '.csv')
+	s = open('url_data/' + file + '.csv')
 	url_list = csv.reader(s)
 	for line in url_list:
 		data_result = get_data(line[1])
@@ -32,12 +32,13 @@ def open_state_file(file):
 		all_data.append(line)
 	return all_data
 
-f = open('state_abrv.txt')
-state_list = f.read().split() 
+states = [	"AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","ID","IL","IN","IA","KS",
+			"KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC",
+			"ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"]
 
-for s in state_list:
-	with open(s + "_data.csv", "wb") as f:
+for state in states:
+	with open('hosp_data/' + state + "_data.csv", "wb") as f:
 		writer = csv.writer(f, delimiter = ",")
-		writer.writerows(open_state_file(s))
+		writer.writerows(open_state_file(state))
 
 driver.close()
