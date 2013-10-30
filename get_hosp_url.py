@@ -23,8 +23,7 @@ states = [	"AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","ID","IL"
 
 driver = webdriver.Firefox()
 driver.get("http://www.hospitalsafetyscore.org/")
-checkbox = driver.find_element_by_id('agree')
-checkbox.click()
+driver.find_element_by_id('agree').click()
 driver.find_element_by_id('search_hosp_btn').click()
 
 for state in states:
