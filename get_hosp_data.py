@@ -40,7 +40,7 @@ states = [
 
 for state in states:
 	with open('hosp_data/' + state + "_data.csv", "wb") as f:
-		writer = csv.writer(f, delimiter = ",")
+		writer = csv.writer(f, delimiter=",")
 		writer.writerows(open_state_file(state))
 
 driver.close()
