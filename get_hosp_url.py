@@ -14,7 +14,7 @@ def search(state):
 		url = hospital.find_element_by_css_selector('h3 a').get_attribute('href')
 		hosp_list.append([name, url])
 	with open('data/' + state + '.csv', 'wb') as f:
-		wtr = csv.writer(f, delimiter = ',')
+		wtr = csv.writer(f, delimiter=',')
 		wtr.writerows(hosp_list)
 
 states = [
