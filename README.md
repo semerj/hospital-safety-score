@@ -1,9 +1,10 @@
-Scraping Hospital Safety Score Data
+Scraping Leapfrog Group's Hospital Safety Score Data
 =====================
 
-My first stab at web scraping with Python and Selenium
+Step 1: Run `dostuff.sh`
 
-Create two folders in the same directory as the two scripts: `\url_data` and `\hosp_data`. Then run `get_url_data` followed by `get_hosp_data`.
+Step 2: Wait for a while
 
+Step 3: ???
 
-Also, NO ONE SHOULD USE THIS, EVER.
+Step 3: Profit
