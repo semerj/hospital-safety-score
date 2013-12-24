@@ -1,12 +1,10 @@
 #!/usr/bin/Python
 
 # warning: this took 4.5 hrs to go form AL to WY
-
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import csv
-#from IPython import embed
 
 driver = webdriver.Firefox()
 
