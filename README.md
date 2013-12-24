@@ -1,4 +1,4 @@
-Scraping Leapfrog Group's Hospital Safety Score Data
+Scraping Fall 2013 Hospital Safety Scores
 =====================
 
 Step 1: Make sure you have [Selenium](http://selenium-python.readthedocs.org/en/latest/) installed and run `dostuff.sh`
