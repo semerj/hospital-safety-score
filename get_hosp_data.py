@@ -1,3 +1,5 @@
+#!/usr/bin/Python
+
 # warning: this took 4.5 hrs to go form AL to WY
 
 from selenium import webdriver
