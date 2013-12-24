@@ -34,12 +34,3 @@ for state in states:
 	search(state)
 
 driver.close()
-
-"""
-# Gets the first hospital's HTML on a state page
-hospital_1 = driver.find_elements_by_css_selector('div.right-con')[0]
-# Extracts the hospital name
-hospital_1.find_element_by_css_selector('h1').text
-# Extracts the hospital URL
-hospital_1.find_element_by_css_selector('h3 a').get_attribute('href')
-"""
