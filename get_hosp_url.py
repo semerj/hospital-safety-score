@@ -1,7 +1,6 @@
 #!/usr/bin/Python
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import time
 import csv
 
@@ -25,7 +24,7 @@ states = [
 	"ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"
 	]
 
-driver = webdriver.Firefox()
+driver = webdriver.PhantomJS()
 driver.get("http://www.hospitalsafetyscore.org/")
 driver.find_element_by_id('agree').click()
 driver.find_element_by_id('search_hosp_btn').click()
