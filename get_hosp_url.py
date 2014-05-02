@@ -26,7 +26,7 @@ states = [
 
 driver = webdriver.PhantomJS()
 driver.get("http://www.hospitalsafetyscore.org/")
-driver.find_element_by_id('agree').click()
+driver.find_element_by_id('TermsCheckbox').click()
 driver.find_element_by_id('search_hosp_btn').click()
 
 for state in states:
